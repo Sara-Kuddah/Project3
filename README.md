@@ -4,4 +4,4 @@ we will build a store website to sell different types of products. In this store
 
 # User storie :
 
-# wireFrame
+# wireFrame e
