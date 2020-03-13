@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 
 // requier route file 
 const indexRouter = require('./app/routes/index')
+const toolRouter = require('./app/routes/tools')
+const coffeeRouter = require('./app/routes/coffees')
 
 
 // require DB configuriton file 
@@ -49,6 +51,8 @@ app.use(express.json());
 
 // mount imported Routers 
 app.use(indexRouter);
+app.use(toolRouter);
+app.use(coffeeRouter);
 
 
 // start the server to listen for requstes on a given a port 
