@@ -7,6 +7,7 @@ const indexRouter = require("./app/routes/index");
 const toolRouter = require("./app/routes/tools");
 const coffeeRouter = require("./app/routes/coffees");
 const machineRouter = require("./app/routes/machines");
+const cartRouter = require("./app/routes/carts");
 // require DB configuriton file
 const db = require("./config/db");
 // establish database connicition
@@ -34,6 +35,7 @@ app.use(indexRouter);
 app.use(toolRouter);
 app.use(coffeeRouter);
 app.use(machineRouter);
+app.use(cartRouter);
 // start the server to listen for requstes on a given a port
 app.listen(port, () => {
   console.log(`coffee store is listining on port ${port}`);
