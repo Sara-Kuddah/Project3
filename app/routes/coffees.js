@@ -28,6 +28,23 @@ router.post('/api/coffee',(req,res)=>{
     });
 });
 
+/**
+ * Action:        SHOW
+ * Method:        GET
+ * URI:           /api/machine
+ * Description:   Get An Article by Article ID
+ */
+router.get("/api/coffee", (req, res) => {
+    // res.json({message:'get all articles'})
+    Coffee.find()
+      .then(coffee => {
+        res.status(200).json({ coffee: coffee });
+      })
+      .catch(error => {
+        res.status(500).json({ error: error });
+      });
+  });
+
 
 //Export the Router so we can use it in server.js file
 module.exports=router;
