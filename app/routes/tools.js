@@ -27,6 +27,7 @@ router.post('/api/tool',(req,res)=>{
         res.status(500).json({error:error});
     });
 });
+
 //****for testing*****
 
 // {
@@ -38,6 +39,24 @@ router.post('/api/tool',(req,res)=>{
 //       "img":"String"
 //     }   
 //   }
+
+/**
+ * Action:        SHOW
+ * Method:        GET
+ * URI:           /api/machine
+ * Description:   Get An Article by Article ID
+ */
+router.get("/api/tool", (req, res) => {
+    // res.json({message:'get all articles'})
+    Tool.find()
+      .then(tool => {
+        res.status(200).json({ tool: tool });
+      })
+      .catch(error => {
+        res.status(500).json({ error: error });
+      });
+  });
+
 
 
 //Export the Router so we can use it in server.js file
