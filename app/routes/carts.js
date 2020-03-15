@@ -16,11 +16,11 @@ const router=express.Router();
  */
 router.post('/api/cart',(req,res)=>{
     // res.json({message: 'cool',q:42 ,data: req.body.coffee});  we know i is work
-    Cart.create(req.body.Cart)
+    Cart.create(req.body.cart)
     //On a successful `create` action, respond wuth 201
     //HTTP status and the content of the new article
    .then((newCart)=>{
-        res.status(201).json({cart : "added "});
+        res.status(201).json({cart : newCart});
         
     })
     //Catch any errors that might occur
@@ -35,7 +35,7 @@ router.post('/api/cart',(req,res)=>{
  * URI:           /api/machine
  * Description:   Get An Article by Article ID
  */
-router.get("api/cart", (req, res) => {
+router.get("/api/cart", (req, res) => {
     // res.json({message:'get all articles'})
     Cart.find()
       .then(cart => {
@@ -45,6 +45,10 @@ router.get("api/cart", (req, res) => {
         res.status(500).json({ error: error });
       });
   });
+
+  
+
+
 
 
 //Export the Router so we can use it in server.js file
