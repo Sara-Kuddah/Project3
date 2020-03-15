@@ -6,21 +6,13 @@ const Schema = mongoose.Schema;
 
 
 const CartSchema = new mongoose.Schema(
-  {
+  { 
+    itemId : String ,
     totalprice : Number ,
-    coffeeorder : [ {
-        type: Schema.Types.ObjectId,
-        ref: 'Coffee'
-      } ,{ amount : { type: Number , default: 1  }}   ],
-    machineorder : [ {
-        type: Schema.Types.ObjectId,
-        ref: 'Machine'
-      } ,{ amount : { type: Number , default: 1  }}   ],
-    toolorder : [ {
-        type: Schema.Types.ObjectId,
-        ref: 'Tool'
-      } ,{ amount : { type: Number , default: 1  }}   ],
-    
+    name: { type: String, required: true },
+    price: Number, // 50 
+    amount :{type : Number , default : 1 },
+    img: String
   },
   {
     timestamps: true
