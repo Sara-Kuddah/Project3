@@ -39,5 +39,34 @@ router.post('/api/machine',(req,res)=>{
         res.status(500).json({error:error});
     });
 });
+
+/**
+ * Action:        SHOW
+ * Method:        GET
+ * URI:           /api/machine
+ * Description:   Get An Machine by Machine ID
+ */
+
+router.get("/api/machine/:id", (req, res) => {
+  Machine.findById(req.params.id)
+    .then(machine => {
+      if (machine) {
+        res.status(200).json({ machine: machine });
+      } else {
+        // If we couldn't find a document with the matching ID
+        res.status(404).json({
+          error: {
+            name: "IdDoseNotExsits",
+            message: "The provided ID doesn't match any element"
+          }
+        });
+      }
+    })
+    // Catch any errors that might occur
+    .catch(error => {
+      res.status(500).json({ error: error });
+    });
+});
+
 //Export the Router so we can use it in server.js file
 module.exports=router;
