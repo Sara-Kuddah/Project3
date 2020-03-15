@@ -1,7 +1,7 @@
 // requier necesssary NPM packeges
 const express = require("express");
 const mongoose = require("mongoose");
-// const cors = require('cors');
+const cors = require('cors');
 // requier route file
 const indexRouter = require("./app/routes/index");
 const toolRouter = require("./app/routes/tools");
@@ -33,7 +33,7 @@ const reactPort = 3000;
 // the method .use sets up middleware for the Express applicition
 app.use(express.json());
 // set CORS headers on response from this API using the cors
-// app.use(cors({ origin: process.env.CLIENT_ORIGIN || `http://localhost:${reactPort}` }))
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || `http://localhost:${reactPort}` }))
 // **** Routes  ****
 // mount imported Routers
 app.use(indexRouter);
