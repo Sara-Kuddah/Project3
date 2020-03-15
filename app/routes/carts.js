@@ -106,6 +106,43 @@ router.delete('/api/cart/:id',(req,res)=>{
   });
  });
 
+
+ 
+/*
+*Action:.......UPDATE
+*Method:.......PATCH
+*URI: ......../api/cart/5d664b8b4f5092aba18e9 
+*Descriptions:......UPdate An cart by cart ID
+ */
+
+router.patch('/api/cart/:id',(req,res)=>{
+  Cart.findById(req.params.id)
+
+  .then((cart)=>{
+      if(cart){
+         
+         return cart.update(req.body.cart);
+      }else{
+          req.status(404).json({
+              error:{
+              name:'DocumentNotFoundError',
+              message:'The provided Id Does\'t match any document '
+          }
+         })
+      }
+
+  })
+  .then(()=>{
+      res.status(200).json({ sucess:{
+        name:'Documentupdated',
+        message:'The document has been updated'
+    }})
+  })
+  .catch((error)=>{
+      res.status(500).json({error:error})
+  })
+})
+
  
 
 //Export the Router so we can use it in server.js file
