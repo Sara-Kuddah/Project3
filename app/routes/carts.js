@@ -91,6 +91,21 @@ router.delete('/api/cart/:id',(req,res)=>{
      res.status(500).json({error:error});
   });
  });
+
+
+
+
+ router.delete('/api/cart',(req,res)=>{
+  Cart.remove()
+  .then((cart)=>{
+    res.status(204).end();
+  })
+ 
+  .catch((error)=>{
+     res.status(500).json({error:error});
+  });
+ });
+
  
 
 //Export the Router so we can use it in server.js file
