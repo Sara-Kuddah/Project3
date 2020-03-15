@@ -11,10 +11,15 @@ const cartRouter = require("./app/routes/carts");
 // require DB configuriton file
 const db = require("./config/db");
 // establish database connicition
-mongoose.connect(db, { useNewUrlParser: true });
+
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once("open", () => {
   console.log(" Connected to Mongo ");
 });
+
+
+
+
 // Instantion Express Application Object
 const app = express();
 // Defined the Port for the API to run on
