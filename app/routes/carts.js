@@ -20,6 +20,8 @@ router.post('/api/cart',(req,res)=>{
     //On a successful `create` action, respond wuth 201
     //HTTP status and the content of the new article
    .then((newCart)=>{
+     console.log('ID',newCart._id);
+     
         res.status(201).json({cart : newCart});
         
     })
@@ -89,6 +91,7 @@ router.delete('/api/cart/:id',(req,res)=>{
  
   .catch((error)=>{
      res.status(500).json({error:error});
+     console.log(" not delete ")
   });
  });
 
