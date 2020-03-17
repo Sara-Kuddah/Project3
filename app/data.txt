@@ -1,0 +1,113 @@
+ ##################   TOOL   ####################
+ ################################################
+ 
+ {
+     "tool":{
+          "name" : "Chemex Bonded Filters Pre-Folded Squares" ,
+       "description" : "- Model FS-100
+                        - 100 filters per pack
+                        - Pure Design - Pure Flavor" ,
+       "type": "Filters" ,
+       "price":  47,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/1551-thickbox_default/chemex-bonded-filters-pre-folded-squares.jpg"
+     }   
+   }
+ ***********************************
+  {
+     "tool":{
+          "name" : "Fellow Monty Mug Black 325ml" ,
+       "description" : "- Model FS-100
+                        - 100 filters per pack
+                        - Pure Design - Pure Flavor" ,
+       "type": "Cups" ,
+       "price":  129,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/1699-thickbox_default/fellow-joey-mug-black-.jpg"
+     }   
+   }
+
+ *********************************************
+  {
+     "tool":{
+          "name" : "Fellow Monty Mug white 325ml" ,
+       "description" : "- Model FS-100
+                        - 100 filters per pack
+                        - Pure Design - Pure Flavor" ,
+       "type": "Cups" ,
+       "price":  129,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/1698-thickbox_default/fellow-joey-mug-white-8oz.jpg"
+     }   
+   }  
+
+
+
+ ##################  COFFEE  ####################
+ ################################################
+ 
+ {
+     "coffee":{
+          "name" : "Illy Grani Beans Whole Coffee Beans 250 g" ,
+       "description" : "Whole  -  250g  -  Chocolate, Honey, Carmel " ,
+       "type": "Illy" ,
+       "price":  51,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/56-home_default/illy-espresso-whole-bean-coffee-3-kg.jpg"
+     }   
+   }
+   **********************************
+ {
+     "coffee":{
+          "name" : "Kiffa Coffee Gigesa 250g" ,
+       "description" : "Whole Bean - 250g - Sweet, Blueberry & Strawberry - Natural - Heirloom" ,
+       "type": "Kiffa" ,
+       "price":  63,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/2401-thickbox_default/kiffa-coffee-nyamiyaga-250g.jpg"
+     }   
+   }
+
+   ***********************
+    {
+     "coffee":{
+          "name" : "Hjeen Coffee Turkish Coffee 250g" ,
+       "description" : "Whole Bean - 250g - Rose, Pecans - Natural" ,
+       "type": "Turkish Coffee" ,
+       "price":  63,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/1636-thickbox_default/hjeen-coffee-turkish-coffee-250g.jpg"
+     }   
+   }  
+
+ ##################  machine ####################
+ ################################################
+ 
+ {
+     "machine":{
+          "name" : "Victoria Arduino Venus Family Espresso Machine" ,
+       "description" : "Tap-Operated Steam Wand - Produce Excellent Coffee -Boiler Water Temperature Adjustment - Hand-Crafted Design" ,
+       "type": " Espresso Machines" ,
+       "price":  4999,
+       "img":"https://www.espressocoffeeshop.com/image/cache/catalog/victoria%20arduino/13%20Venus%20Family_chrome-800x800.jpg"
+     }   
+   }   
+
+******************************************   
+ {
+     "machine":{
+          "name" : "Breville the Oracle Touch Espresso Machine" ,
+       "description" : "Stainless Steel Dual Boiler - Touch screen operation - 5 pre-programmed Café favorites - Adjustable Grind Control - Programmable Milk Temperature and Texture - One/Two Shots" ,
+       "type": " Espresso Machines" ,
+       "price":  12399,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/2088-thickbox_default/Breville-the-Oracle-Touch-Espresso-Machine-1572.jpg"
+     }   
+   }   
+
+****************************************** 
+ {
+     "machine":{
+          "name" : "Orchestrale Nota All Black With Wood Kit" ,
+       "description" : "Thermosyphon System - 2.8 Liter Water Tank - Quiet Rotary Pump - Gorgeous Polished Stainless Steel" ,
+       "type": " Espresso Machines" ,
+       "price":  12399,
+       "img":"https://d2z3i2y6z8pv3i.cloudfront.net/442-thickbox_default/orchestrale-nota-all-black-with-wood-kit.jpg"
+     }   
+   }   
+
+
+
