@@ -11,7 +11,7 @@ const cartRouter = require("./app/routes/carts");
 // require DB configuriton file
 const db = require("./config/db");
 // establish database connicition
-
+mongoose.Promise = global.Promise;
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once("open", () => {
   console.log(" Connected to Mongo ");
@@ -25,10 +25,8 @@ const port = process.env.PORT || 5000;
 const reactPort = 3000;
 
 // establish database connection
-mongoose.Promise = global.Promise;
-mongoose.connect(db, {
-  useMongoClient: true
-});
+
+
 
 /******* MiddeleWare ************/
 /*
