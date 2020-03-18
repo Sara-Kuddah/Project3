@@ -1,17 +1,19 @@
 // Require necessary NPM packages
 const express = require('express');
-//Require Mongoose Model for Article
+//Require Mongoose Model for machine
 const Machine= require('../models/machine');
 //Instantiate a Router ( mini app thet only handles routes )
 const router=express.Router();
+
+
 /**
  * Action:        SHOW
  * Method:        GET
  * URI:           /api/machine
- * Description:   Get An Article by Article ID
+ * Description:   Get all machine items 
  */
 router.get("/api/machine", (req, res) => {
-    // res.json({message:'get all articles'})
+   
     Machine.find()
       .then(machine => {
         res.status(200).json({ machine: machine });
@@ -20,17 +22,18 @@ router.get("/api/machine", (req, res) => {
         res.status(500).json({ error: error });
       });
   });
+
    /**
  * Action:       CREATE
  * Method:       POST
- * URI:           /api/articales
- * DEscriptin:   Create A New Articale 
+ * URI:           /api/machine
+ * DEscriptin:   Create A New machine
  */
 router.post('/api/machine',(req,res)=>{
-    // res.json({message: 'cool',q:42 ,data: req.body.coffee});  we know i is work
+   
     Machine.create(req.body.machine)
     //On a successful `create` action, respond wuth 201
-    //HTTP status and the content of the new article
+    //HTTP status and the content of the new machine
    .then((newMachine)=>{
         res.status(201).json({machine:newMachine});
     })
@@ -40,33 +43,7 @@ router.post('/api/machine',(req,res)=>{
     });
 });
 
-/**
- * Action:        SHOW
- * Method:        GET
- * URI:           /api/machine
- * Description:   Get An Machine by Machine ID
- */
-
-router.get("/api/machine/:id", (req, res) => {
-  Machine.findById(req.params.id)
-    .then(machine => {
-      if (machine) {
-        res.status(200).json({ machine: machine });
-      } else {
-        // If we couldn't find a document with the matching ID
-        res.status(404).json({
-          error: {
-            name: "IdDoseNotExsits",
-            message: "The provided ID doesn't match any element"
-          }
-        });
-      }
-    })
-    // Catch any errors that might occur
-    .catch(error => {
-      res.status(500).json({ error: error });
-    });
-});
+  
 
 //Export the Router so we can use it in server.js file
 module.exports=router;

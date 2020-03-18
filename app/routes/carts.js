@@ -1,7 +1,7 @@
 // Require necessary NPM packages
 const express = require('express');
 
-//Require Mongoose Model for Article
+//Require Mongoose Model for cart
 const Cart= require('../models/cart');
 
 //Instantiate a Router ( mini app thet only handles routes )
@@ -11,16 +11,14 @@ const router=express.Router();
  /**
  * Action:       CREATE
  * Method:       POST
- * URI:           /api/articales
- * DEscriptin:   Create A New Articale 
+ * URI:           /api/cart
+ * DEscriptin:   Create A New item in cart 
  */
 router.post('/api/cart',(req,res)=>{
-    // res.json({message: 'cool',q:42 ,data: req.body.coffee});  we know i is work
     Cart.create(req.body.cart)
     //On a successful `create` action, respond wuth 201
-    //HTTP status and the content of the new article
+    //HTTP status and the content of the new item in cart
    .then((newCart)=>{
-     console.log('ID',newCart._id);
      
         res.status(201).json({cart : newCart});
         
@@ -31,25 +29,13 @@ router.post('/api/cart',(req,res)=>{
     });
 });
 
-// {
-// 	"cart":{
-// 		"itemId" : "66" ,
-//     "totalprice" : 400 ,
-//     "name": "Ar",
-//     "price": 400, 
-//     "amount" : 1 ,
-//     "img": "String"
-// 	} 
-//   }
-
 /**
- * Action:        SHOW
+ * Action:        Index
  * Method:        GET
- * URI:           /api/machine
- * Description:   Get An Article by Article ID
+ * URI:           /api/cart
+ * Description:   Get all  items from cart 
  */
 router.get("/api/cart", (req, res) => {
-    // res.json({message:'get all articles'})
     Cart.find()
       .then(cart => {
         res.status(200).json({ cart: cart });
@@ -59,14 +45,13 @@ router.get("/api/cart", (req, res) => {
       });
   });
 
-  
 
 
 /**
  * Action:       DESTROY
  * Method:       DELETE
  * URI:          /api/cart/5d66b8b68b
- * DEscriptin:   Delete An Articale  by Article ID
+ * DEscriptin:   Delete An item from cart  by the ID
  */
 router.delete('/api/cart/:id',(req,res)=>{
   Cart.findById(req.params.id)
@@ -95,7 +80,12 @@ router.delete('/api/cart/:id',(req,res)=>{
   });
  });
 
-
+/**
+ * Action:       DESTROY
+ * Method:       DELETE
+ * URI:          /api/cart
+ * DEscriptin:   Delete all items from cart
+ */
 
 
  router.delete('/api/cart',(req,res)=>{
@@ -115,7 +105,7 @@ router.delete('/api/cart/:id',(req,res)=>{
 *Action:.......UPDATE
 *Method:.......PATCH
 *URI: ......../api/cart/5d664b8b4f5092aba18e9 
-*Descriptions:......UPdate An cart by cart ID
+*Descriptions:......UPdate An item in the  cart by  ID
  */
 
 router.patch('/api/cart/:id',(req,res)=>{

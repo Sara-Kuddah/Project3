@@ -1,7 +1,7 @@
 // Require necessary NPM packages
 const express = require('express');
 
-//Require Mongoose Model for Article
+//Require Mongoose Model for tool
 const Tool= require('../models/tool');
 
 //Instantiate a Router ( mini app thet only handles routes )
@@ -11,14 +11,14 @@ const router=express.Router();
  /**
  * Action:       CREATE
  * Method:       POST
- * URI:           /api/articales
- * DEscriptin:   Create A New Articale 
+ * URI:           /api/tool
+ * DEscriptin:   Create A New tool
  */
 router.post('/api/tool',(req,res)=>{
-    // res.json({message: 'cool',q:42 ,data: req.body.tool});  we know i is work
+  
     Tool.create(req.body.tool)
     //On a successful `create` action, respond wuth 201
-    //HTTP status and the content of the new article
+    //HTTP status and the content of the new tool
    .then((newTool)=>{
         res.status(201).json({tool:newTool});
     })
@@ -28,26 +28,15 @@ router.post('/api/tool',(req,res)=>{
     });
 });
 
-//****for testing*****
-
-// {
-//     "tool":{
-//          "name" : "Chemex Classic Coffee Maker" ,
-//       "description" : "Brews Delicious Tasting Coffee" ,
-//       "type": "tool" ,
-//       "price":  50,
-//       "img":"String"
-//     }   
-//   }
 
 /**
- * Action:        SHOW
+ * Action:        Index
  * Method:        GET
- * URI:           /api/machine
- * Description:   Get An Article by Article ID
+ * URI:           /api/tool
+ * Description:   Get all tool items
  */
 router.get("/api/tool", (req, res) => {
-    // res.json({message:'get all articles'})
+   
     Tool.find()
       .then(tool => {
         res.status(200).json({ tool: tool });
