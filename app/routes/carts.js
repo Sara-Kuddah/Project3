@@ -143,6 +143,35 @@ router.patch('/api/cart/:id',(req,res)=>{
   })
 })
 
+/*
+*Action:.......SHOW
+*Method:.......GET
+*URI: ......../api/cart/itemid 
+*Descriptions:......Git An cart by cart NAME
+ */
+
+router.get('/api/cart/:id',(req,res)=>{
+  Cart.find(req.params.id)
+
+  .then((cart)=>{
+      if(cart){
+         return res.status(200).json({ sucess:{
+          name:'Documentexist',
+          message:'The item is already in your cart '
+      }})
+    }else{
+         return  res.status(200).json({ sucess:{
+          name:'Documentnotexist',
+          message:'The item will add to your cart '
+      }
+  })
+  .catch((error)=>{
+      res.status(500).json({error:error})
+  })
+}
+  })
+})
+
  
 
 //Export the Router so we can use it in server.js file
