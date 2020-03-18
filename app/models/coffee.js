@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const coffeeSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true }, // lavazza beans
-    description: String,   // italy 
-    type: { type: String, default: "Coffee" },     // arabica
-    price: Number,   //100 
+    name: { type: String, required: true }, 
+    description: String,   
+    type: { type: String, default: "Coffee" },    
+    price: Number,  
     img:String
   },
   {

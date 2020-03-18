@@ -18,8 +18,6 @@ mongoose.connection.once("open", () => {
 });
 
 
-
-
 // Instantion Express Application Object
 const app = express();
 // Defined the Port for the API to run on
@@ -45,15 +43,3 @@ app.use(cartRouter);
 app.listen(port, () => {
   console.log(`coffee store is listining on port ${port}`);
 });
-/*
-C.R.U.D 
-     R 
-   ....... Read All
-   ....... Read one by id 
-    Create 
-     Read 
-   ........  Read All  ..... Index 
-   ........  Read by Id .....   Show 
-    Update  ............   UPDATE
-    Delete ............... DESTROY
-*/

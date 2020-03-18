@@ -38,11 +38,42 @@
      }   
    }  
 
+   {
+  "tool":{
+     "name" : "Chemex coffee maker" ,
+   "description" : "chemex tool maker for filter black coffee " ,
+   "type": "tool" ,
+   "price": 63,
+   "img":"https://store.chemexcoffeemaker.com/media/catalog/product/c/h/chemex-handblown-13cup-detail_1.png"
+  }  
+ }
+———————
+{
+  "tool":{
+     "name" : "Aeropress Coffee Maker" ,
+   "description" : "Aeropress toolkit, it has all you need for hand make coffee " ,
+   "type": "tool" ,
+   "price": 53,
+   "img":"https://infoodcoffeeroastery.co.za/wp-content/uploads/2019/03/AeroPress-Whole-800x800-1.jpg"
+  }  
+ }
+
 
 
  ##################  COFFEE  ####################
  ################################################
- 
+
+ {
+  "coffee":{
+     "name" : "Lavazza" ,
+   "description" : "Lavazza super cream beans " ,
+   "type": "Coffee" ,
+   "price": 53,
+   "img":"https://d2z3i2y6z8pv3i.cloudfront.net/134-thickbox_default/lavazza-crema-e-aroma-whole-bean-coffee-1-kg.jpg"
+  }  
+ }
+——
+
  {
      "coffee":{
           "name" : "Illy Grani Beans Whole Coffee Beans 250 g" ,
@@ -109,5 +140,34 @@
      }   
    }   
 
+{
+  "machine":{
+     "name" : "Rocket Espresso GiOTTO type v" ,
+   "description" : "E16 group machine espresso maker machine " ,
+   "type": "Machine" ,
+   "price": 7399,
+   "img":"https://rocket-espresso.com/images/crono_v_giotto_front_3_4_2x.jpg"
+  }  
+ }
+—————————————————————————————
+{
+  "machine":{
+     "name" : "Orchestrale Nota" ,
+   "description" : "Rotary pump E16 group machine high quality espresso shots " ,
+   "type": "Machine" ,
+   "price": 11000,
+   "img":"https://d2z3i2y6z8pv3i.cloudfront.net/443-thickbox_default/orchestrale-nota-with-wood-sides-wood-kit.jpg"
+  }  
+ }
+——————
+{
+  "machine":{
+     "name" : "Eureka Atom Espresso Grinder" ,
+   "description" : "Coffee grinder Eureka one of the oldest machine grinder in italy " ,
+   "type": "Machine" ,
+   "price": 3000,
+   "img":"https://www.eureka.co.it/public/catalogo/4-1.jpg"
+  }  
+ }
 
 
