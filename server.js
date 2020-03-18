@@ -23,6 +23,13 @@ const app = express();
 // Defined the Port for the API to run on
 const port = process.env.PORT || 5000;
 const reactPort = 3000;
+
+// establish database connection
+mongoose.Promise = global.Promise;
+mongoose.connect(db, {
+  useMongoClient: true
+});
+
 /******* MiddeleWare ************/
 /*
 // Add bodyParser MiddleWare which will parse JSON requsert 
