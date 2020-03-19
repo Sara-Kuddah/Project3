@@ -1,3 +1,6 @@
+# Coffee Store
+
+
 # List technologies used: 
 * React
 * mongoDB 
